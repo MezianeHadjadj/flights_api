@@ -1,3 +1,40 @@
 {
+  "type": "object",
+  "properties": {
+    "start_date": {
+      "type": "date",
+      "required": true
+    },
+    "return_date": {
+      "type": "date",
+      "required": false
+    },
+    "adult_passengers": {
+      "type": "integer",
+      "required": true
+    },
+    "origin": {
+      "type": "string",
+      "required": true
+    },
+    "destination": {
+      "type": "string",
+      "required": true
+    },
+    "max_stops": {
+      "type": "integer",
+      "required": true
+    },
+    "max_price": {
+      "type": "integer",
+      "required": true
+    },
+    "max_price_currency": {
+      "type": "string",
+      "required": true
+    }
 
+
+
+  }
 }
