@@ -5,10 +5,16 @@
 <head>
 <title>FLights Apis</title>
 
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css" >
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/CSS/style.css" >
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
@@ -17,14 +23,51 @@
     <script src="js/services/flightsService.js"></script>
     <script src="js/core.js"></script>
 </head>
-Flights apis.
+
 
 <body ng-controller="mainController">
 
-    <div>
-        <input type="submit" ng-click="get_flights()" ></input>
+        <!-- FLights search api form -->
+        <form  class="col-md-4" id="center_form" >
+            <fieldset class="form-group">
+                <label >Start date:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Return date:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Adult passengers:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="2">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Origin:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="NYC">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Destination:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="LGA">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Max stops</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="1">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Max price</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="290.00">
+            </fieldset>
+            <fieldset class="form-group">
+                <label >Max price currency</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="USD">
+            </fieldset>
+
+            <button type="submit" ng-click="get_flights()" class="btn btn-primary">Search </button>
+        </form>
+
+        <!-- end of Flight api search form -->
+
         <div>{{ results }}</div>
-    </div>
 
 </body>
 </html>
