@@ -2,11 +2,11 @@
   "type": "object",
   "properties": {
     "start_date": {
-      "type": "date",
+      "type": "string",
       "required": true
     },
     "return_date": {
-      "type": "date",
+      "type": "string",
       "required": false
     },
     "adult_passengers": {

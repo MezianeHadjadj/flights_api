@@ -7,7 +7,7 @@ module.exports = function(request, schemaName, res) {
     , invalid = validate(request, schema)
 
     if (!invalid.length) return true
-
+    console.log("Message:"+JSON.stringify(invalid));
     res.send(400, {
         name: 'BadRequest',
         message: 'Request is invalid',
