@@ -31,35 +31,35 @@
         <form  class="col-md-4" id="center_form" >
             <fieldset class="form-group">
                 <label >Start date:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
+                <input type="text" class="form-control" ng-model="request.start_date" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
             </fieldset>
             <fieldset class="form-group">
                 <label >Return date:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
+                <input type="text" class="form-control" ng-model="request.return_date" id="exampleInputEmail1" placeholder="YYYY-MM-DD HH:MM:SS">
             </fieldset>
             <fieldset class="form-group">
                 <label >Adult passengers:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="2">
+                <input type="number" class="form-control" ng-model="request.adult_passengers" id="exampleInputEmail1" placeholder="2">
             </fieldset>
             <fieldset class="form-group">
                 <label >Origin:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="NYC">
+                <input type="text" class="form-control" ng-model="request.origin" id="exampleInputEmail1" placeholder="NYC">
             </fieldset>
             <fieldset class="form-group">
                 <label >Destination:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="LGA">
+                <input type="text" class="form-control" ng-model="request.destination" id="exampleInputEmail1" placeholder="LGA">
             </fieldset>
             <fieldset class="form-group">
-                <label >Max stops</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="1">
+                <label >Max stops:</label>
+                <input type="number" class="form-control" ng-model="request.max_stops" id="exampleInputEmail1" placeholder="1">
             </fieldset>
             <fieldset class="form-group">
-                <label >Max price</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="290.00">
+                <label >Max price:</label>
+                <input type="number" class="form-control" ng-model="request.max_price" id="exampleInputEmail1" placeholder="290.00">
             </fieldset>
             <fieldset class="form-group">
-                <label >Max price currency</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="USD">
+                <label >Max price currency:</label>
+                <input type="text" class="form-control" ng-model="request.max_price_currency" id="exampleInputEmail1" placeholder="USD">
             </fieldset>
 
             <button type="submit" ng-click="get_flights()" class="btn btn-primary">Search </button>
