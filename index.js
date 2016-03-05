@@ -1,5 +1,3 @@
-	
-
 var express = require('express')
 , app = express()
 , bodyParser = require('body-parser')
@@ -13,16 +11,21 @@ var express = require('express')
 
 // configuration ===============================================================
 app.use(express.static(__dirname + '/public'));
-app.use(morgan('dev')); 
-app.use(bodyParser.urlencoded({'extended': 'true'})); 
-app.use(bodyParser.json()); 
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({'extended': 'true'}));
+app.use(bodyParser.json());
+
+
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    extended: true
+}));
 
 
 
 
-
-
-app.validate = require('./validate')
+app.validate = require('./validate');
 require('./apis/flights_apis.js')(app);
 
 app.use(function (err, req, res, next) {

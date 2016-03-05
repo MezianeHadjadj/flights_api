@@ -1,10 +1,29 @@
 <!doctype html>
-<html >
+
+<html ng-app="comtravo">
+
 <head>
 <title>FLights Apis</title>
-</head>
 
-<body >
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/style.css" >
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+
+    <script src="js/controllers/flightsController.js"></script>
+    <script src="js/services/flightsService.js"></script>
+    <script src="js/core.js"></script>
+</head>
+Flights apis.
+
+<body ng-controller="mainController">
+
+    <div>
+        <input type="submit" ng-click="get_flights()" ></input>
+    </div>
 
 </body>
 </html>

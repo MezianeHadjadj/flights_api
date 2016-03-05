@@ -10,7 +10,7 @@
       "required": false
     },
     "adult_passengers": {
-      "type": "integer",
+      "type": "string",
       "required": true
     },
     "origin": {

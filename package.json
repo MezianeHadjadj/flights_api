@@ -19,7 +19,8 @@
     "parse": "~1.6.12",
     "parse-server": "~2.1.2",
     "jsonschema": "~0.3.2",
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "connect": "3.4.1"
   },
   "scripts": {
     "start": "node index.js",

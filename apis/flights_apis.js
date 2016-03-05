@@ -1,3 +1,5 @@
+
+
 module.exports = exports = function(app) {
     app.get('/api/flights/list', exports.list)
 }
@@ -5,7 +7,8 @@ module.exports = exports = function(app) {
 
 
 exports.list =  function (req, res) {
-    //    if (!req.app.validate(req.body, 'flight_validate', res)) return
+    console.log(JSON.stringify(req.body));
+       if (!req.app.validate(req.body, 'flight_validate', res)) return
     res.json({"flights":"results"});
 
 };
