@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/style.css" >
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -25,8 +26,9 @@
 </head>
 
 
-<body ng-controller="mainController">
+<body ng-controller="mainController" class="container-fuild">
 
+<div class="row">
         <!-- FLights search api form -->
         <form  class="col-md-4" id="center_form" >
             <fieldset class="form-group">
@@ -66,8 +68,30 @@
         </form>
 
         <!-- end of Flight api search form -->
+    </div>
 
-        <div>{{ results }}</div>
+
+<!-- Start of Flight api search results -->
+
+        <section class="flight-tracker">
+            <header>
+                <h1 class="aa-logo">American Airlines</h1>
+                <span class="flight-number">AA289</span>
+            </header>
+
+            <div class="flight-duration">
+                <span class="flight-start">11:35</span>
+                <span class="flight-end">15:05</span>
+            </div>
+
+            <footer>
+                <span class="flight-from"><strong>ORD</strong> <span class="city">Chicago</span></span>
+                <span class="flight-to"><strong>PVG</strong> <span class="city">Shanghai</span></span>
+                <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jet" width="25">
+            </footer>
+</section>
+
+
 
 </body>
 </html>

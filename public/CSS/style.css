@@ -1,6 +1,130 @@
+html, body {
+    background-color: #009688;
+}
+
+.row{
+    background-color: #009688;
+}
 #center_form{
     margin-left: 25% ;
     margin-top: 60px;
     margin-bottom: 60px;
-    width:50% /* value of your choice which suits your alignment */
+    width:50% ;
+}
+
+/*  cards style */
+.flight-tracker {
+    position: absolute;
+    height: auto;
+    width: 550px;
+    margin-left: 30% ;
+    margin-top: 60px;
+
+font-family: 'Ubuntu Mono';
+    font-weight: 400;
+    color: #4e4e4e;
+    border-radius: 32px / 28px;
+
+}
+.flight-tracker header {
+    background: white;
+    border-radius: 32px 32px 0 0 / 28px 28px 0 0;
+    padding: 7px 15px;
+
+}
+.flight-tracker header h1.aa-logo {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    height: 20px;
+    width: 130px;
+    background-repeat: no-repeat;
+    background-image: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAyMSA3OS4xNTQ5MTEsIDIwMTMvMTAvMjktMTE6NDc6MTYgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NDBEQUExQUFCQjMxMUUzOTI0QUJFNDAwRUZDMEY4NCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NDBEQUExQkFCQjMxMUUzOTI0QUJFNDAwRUZDMEY4NCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRCMUVCQ0ZGQUJCMjExRTM5MjRBQkU0MDBFRkMwRjg0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCMUVCRDAwQUJCMjExRTM5MjRBQkU0MDBFRkMwRjg0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEB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);
+}
+.flight-tracker header .flight-number {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    font-size: 18px;
+}
+.flight-tracker .flight-details {
+    margin: -1px 0 0;
+}
+.flight-tracker .flight-duration {
+    padding: 7px 15px;
+    background: white;
+}
+.flight-tracker .flight-duration .flight-end {
+    float: right;
+}
+.flight-tracker footer {
+    background-color: #289dd7;
+    background-image: -webkit-linear-gradient(#289dd7, #0e8acf);
+    background-image: linear-gradient(#289dd7, #0e8acf);
+    border-radius: 0 0 32px 32px / 0 0 28px 28px;
+    height: 53px;
+    color: white;
+    font-size: 11px;
+    text-shadow: 1px 1px 2px rgba(13, 25, 68, 0.4);
+    box-shadow: 0 10px 24px rgba(13, 25, 68, 0.7);
+    overflow: hidden;
+}
+.flight-tracker footer strong {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+}
+.flight-tracker footer .flight-from {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+}
+.flight-tracker footer .flight-to {
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+}
+.flight-tracker footer .flight-progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 100px;
+    background: #015683;
+    border-radius: 1px;
+    box-shadow: 0 0 2px rgba(13, 25, 68, 0.4);
+}
+.flight-tracker footer .flight-progress::before {
+    content: '\20';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: white;
+    border-radius: 1px;
+    box-shadow: inset 0 0 1px rgba(13, 25, 68, 0.4);
+}
+.flight-tracker footer .flight-progress::after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 2px;
+    width: 2px;
+    background: white;
+    border-radius: 1px;
+    box-shadow: 0 0 1px 1px white;
+}
+.flight-tracker .airplaine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    text-shadow: 1px 1px 2px rgba(13, 25, 68, 0.4);
+    -webkit-animation: airplaine 12s infinite;
+    -moz-animation: airplaine 12s infinite;
+    animation: airplaine 12s infinite;
 }

@@ -4,7 +4,7 @@ module.exports = exports = function(app) {
   //  app.get('/api/flights/list/:add', exports.list)
 }
 exports.list =  function (req, res) {
-       if (!req.app.validate(req.body, 'flight_validate', res)) return
+      // if (!req.app.validate(req.body, 'flight_validate', res)) return
 
     var params={
         request: {
