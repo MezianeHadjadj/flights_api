@@ -23,7 +23,12 @@ angular.module('flightsController', [])
                 })
                 .error(function(err){
                     if (err["message"]="Request is invalid"){
-                        alert("Please put a valide request :)");
+                        console.log("err:"+ JSON.stringify(err));
+                        var requirments="Requirments: \n";
+                        for (ele in err.validation){
+                            requirments+= "- " +(err.validation[ele].property).substring(9)+": "+err.validation[ele].message+"\n";
+                        }
+                        alert("Please put a valide request :). \n \n"+requirments);
                     }
                 });
         };
