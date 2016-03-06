@@ -3,10 +3,12 @@
   "properties": {
     "start_date": {
       "type": "string",
+      "format": "date",
       "required": true
     },
     "return_date": {
       "type": "string",
+      "format": "date",
       "required": false
     },
     "adult_passengers": {
