@@ -16,9 +16,10 @@ angular.module('flightsController', [])
             };
 
             Flights.get_flights($scope.request)
-                .success(function(data) {
-                    console.log(data)
-                    $scope.results=JSON.parse(data)
+                .success(function(results) {
+                    console.log( results);
+                    console.log(results.trips.tripOption);
+                    $scope.results=results;
                 })
                 .error(function(err){
                     if (err["message"]="Request is invalid"){

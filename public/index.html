@@ -73,23 +73,27 @@
 
 <!-- Start of Flight api search results -->
 
-        <section class="flight-tracker">
+        <section class="flight-tracker" ng-repeat="flight in results.trips.tripOption" >
             <header>
                 <h1 class="aa-logo">American Airlines</h1>
                 <span class="flight-number">AA289</span>
             </header>
+            <div ng-repeat="item in flight.slice[0].segment" >
+            <div class="flight-duration" >
+                <span class="flight-start">{{ item.leg[0].departureTime }} <h3>{{ item.leg[0].origin }} </h3></span>
+                <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jedt" width="25">
 
-            <div class="flight-duration">
-                <span class="flight-start">11:35</span>
-                <span class="flight-end">15:05</span>
+                <span class="flight-end">{{ item.leg[0].arrivalTime }}    {{ item.leg[0].destination }} </span>
+                <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jet" width="25">
+
             </div>
 
+
+            </div>
             <footer>
-                <span class="flight-from"><strong>ORD</strong> <span class="city">Chicago</span></span>
-                <span class="flight-to"><strong>PVG</strong> <span class="city">Shanghai</span></span>
-                <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jet" width="25">
             </footer>
-</section>
+            <p>------------------------------------------------------------------</p>
+        </section>
 
 
 
