@@ -2,6 +2,11 @@ body {
     background-color: #009688 !important;
 }
 
+.horizontal_line{height:1px;
+    width:100%;
+    background:#000;
+    margin-top:100px;}
+
 .row{
     background-color: #009688;
 }

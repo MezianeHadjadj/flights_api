@@ -1,11 +1,9 @@
 <!doctype html>
-
 <html ng-app="comtravo">
-
 <head>
-<title>FLights Apis</title>
+<title>Flights Search engine</title>
 
- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css" >
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -25,10 +23,9 @@
     <script src="js/core.js"></script>
 </head>
 
-
 <body ng-controller="mainController" class="container-fuild">
 
-<div class="row">
+    <div class="row">
         <!-- FLights search api form -->
         <form  class="col-md-4" id="center_form" >
             <fieldset class="form-group">
@@ -75,26 +72,25 @@
 
 
 
-<section class="flight-tracker" ng-repeat="flight in results.trips.tripOption" >
-    <header>
-        <h4 class="aa-logo"> Flight {{  results.trips.tripOption.indexOf(flight) }}</h4>
-        <span class="flight-time">{{ flight.slice[0].duration }} minute</span>
-        <span class="flight-number">{{ flight.saleTotal }}</span>
-    </header>
-    <div ng-repeat="item in flight.slice[0].segment" >
-        <div class="flight-duration" >
-            <span class="flight-start">{{ item.leg[0].departureTime }} <span id="aeroport"> {{ item.leg[0].origin }} </span> </span>
-            <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jedt" width="25">
-            <span class="flight-end">{{ item.leg[0].arrivalTime }}  <span id="aeroport">   {{ item.leg[0].destination }} </span> </span>
+    <section class="flight-tracker" ng-repeat="flight in results.trips.tripOption" >
+        <header>
+            <h4 class="aa-logo"> Flight {{  results.trips.tripOption.indexOf(flight) }}</h4>
+            <span class="flight-time">{{ flight.slice[0].duration }} minute</span>
+            <span class="flight-number">{{ flight.saleTotal }}</span>
+        </header>
+        <div ng-repeat="item in flight.slice[0].segment" >
+            <div class="flight-duration" >
+                <span class="flight-start">{{ item.leg[0].departureTime }} <span id="aeroport"> {{ item.leg[0].origin }} </span> </span>
+                <img class="airplaine" src="https://maxcdn.icons8.com/iOS7/PNG/25/Military/fighter_jet-25.png" title="Fighter Jedt" width="25">
+                <span class="flight-end">{{ item.leg[0].arrivalTime }}  <span id="aeroport">   {{ item.leg[0].destination }} </span> </span>
+
+            </div>
 
         </div>
-
-    </div>
-    <footer>
-    </footer>
-    <p>------------------------------------------------------------------</p>
-</section>
-
+        <footer>
+        </footer>
+        <hr class="horizontal_line">
+    </section>
 
 
 

@@ -1,11 +1,10 @@
 var config = require('konfu');
 module.exports = exports = function(app) {
     app.post('/api/flights/list', exports.list)
-  //  app.get('/api/flights/list/:add', exports.list)
 }
 exports.list =  function (req, res) {
         console.log(req.body);
-     //  if (!req.app.validate(req.body, 'flight_validate', res)) return
+       if (!req.app.validate(req.body, 'flight_validate', res)) return
     var params={
         request: {
             passengers: {
