@@ -4,7 +4,6 @@
 <title>Flights Search engine</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css" >
@@ -59,14 +58,10 @@
                 <label >Max price:</label>
                 <input type="number" class="form-control" ng-model="request.max_price" id="exampleInputEmail1" placeholder="290.00">
             </fieldset>
-            <fieldset class="form-group">
-                <label >Max price currency:</label>
-                <input type="text" class="form-control" ng-model="request.max_price_currency" id="exampleInputEmail1" placeholder="USD">
-            </fieldset>
 
             <fieldset class="form-group">
-                <label for="exampleSelect1">Example select</label>
-                <select class="form-control" ng-model="request.test" id="exampleSelect1">
+                <label for="exampleSelect1">Max price currency:</label>
+                <select class="form-control" ng-model="request.max_price_currency" id="exampleSelect1">
                     <option value="">Select Currency</option>
                     <option value="AUD">Australian Dollar</option>
                     <option value="BRL">Brazilian Real </option>
