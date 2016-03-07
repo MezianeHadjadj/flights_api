@@ -1,14 +1,18 @@
 body {
-    background-color: #009688 !important;
+    /*background-color: #009688 !important; */
+    background-image: url("../images/background3.jpg") !important;
 }
 
+label{
+    color: white;
+}
 .horizontal_line{height:1px;
     width:100%;
     background:#000;
     margin-top:100px;}
 
 .row{
-    background-color: #009688;
+   /* background-color: #009688; */
 }
 .flight_element{
     font-size: 18px;
