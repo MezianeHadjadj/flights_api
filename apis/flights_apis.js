@@ -18,7 +18,7 @@ exports.list =  function (req, res) {
                 }
             ],
             maxPrice: req.body.max_price_currency + req.body.max_price,
-            solutions: 5
+            solutions:10
         }
     };
 
