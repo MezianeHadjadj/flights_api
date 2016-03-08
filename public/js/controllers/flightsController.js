@@ -1,15 +1,7 @@
 angular.module('flightsController', [])
 
     .controller('mainController', ['$scope','$http','Flights', function($scope, $http, Flights) {
-        $scope.request = {
-            "start_date": "2016-03-07",
-            "return_date":"2016-03-17",
-            "adult_passengers":2,
-            "origin": "NYC",
-            "destination":"LGA",
-            "max_stops": 1,
-            "max_price": 1000
-        };
+
         $scope.get_flights = function() {
             console.log("request:"+JSON.stringify($scope.request));
 

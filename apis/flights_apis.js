@@ -3,7 +3,6 @@ module.exports = exports = function(app) {
     app.post('/api/flights/list', exports.list)
 }
 exports.list =  function (req, res) {
-        console.log(req.body);
        if (!req.app.validate(req.body, 'flight_validate', res)) return
     var params={
         request: {
@@ -14,28 +13,12 @@ exports.list =  function (req, res) {
                 {
                     origin: req.body.origin,
                     destination: req.body.destination,
-                 //   date: req.body.start_date.substring(0,10),
+                    date: req.body.start_date,
                     maxStops: req.body.max_stops
                 }
             ],
             maxPrice: req.body.max_price_currency + req.body.max_price,
-            solutions: 1
-        }
-    };
-    var params_test={
-        "request": {
-            "passengers": {
-                "adultCount": 2
-            },
-            "slice": [
-                {
-                    "origin": "NYC",
-                    "destination": "LGA",
-                    "date": "2016-03-11",
-                    "maxStops": 4
-                }
-            ],
-            solutions: 1
+            solutions: 5
         }
     };
 
@@ -43,10 +26,12 @@ exports.list =  function (req, res) {
     request.post({
         headers: {'content-type' : 'application/json'},
         url: config.QPX_URL+'?key='+config.API_KEY,
-        body: JSON.stringify(params_test)
+        body: JSON.stringify(params)
 
     }, function(error, response, body){
         console.log("error:"+error);
+        console.log("response:"+response);
+        console.log("body:"+body);
         res.json(JSON.parse(body));
     });
 
