@@ -1,13 +1,14 @@
 angular.module('flightsController', [])
 
     .controller('mainController', ['$scope','$http','Flights', function($scope, $http, Flights) {
-
+        $scope.loading=false;
         $scope.get_flights = function() {
             console.log("request:"+JSON.stringify($scope.request));
-
+            $scope.loading=true;
             Flights.get_flights($scope.request)
                 .success(function(results) {
                     console.log( results);
+                    $scope.loading=false;
                     if(results.trips.tripOption==undefined){
                         alert("Sorry, there are no result matching your search request.");
                     }
