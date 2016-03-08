@@ -8,6 +8,9 @@ angular.module('flightsController', [])
             Flights.get_flights($scope.request)
                 .success(function(results) {
                     console.log( results);
+                    if(results.trips.tripOption==undefined){
+                        alert("Sorry, there are no result matching your search request.");
+                    }
                     console.log(results.trips.tripOption);
                     $scope.results=results;
                 })
