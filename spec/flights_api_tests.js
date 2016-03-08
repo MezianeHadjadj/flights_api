@@ -3,22 +3,7 @@ var app_file = require("../index.js")
 var base_url = "http://localhost:1337/"
 var flights_apis=require("../apis/flights_apis.js");
 
-var params_test={
-    "request": {
-        "passengers": {
-            "adultCount": 2
-        },
-        "slice": [
-            {
-                "origin": "NYC",
-                "destination": "LGA",
-                "date": "2016-03-11",
-                "maxStops": 4
-            }
-        ],
-        solutions: 1
-    }
-};
+var params_test={};
 
 describe("Test flights apis", function() {
     describe("GET /", function() {
@@ -34,6 +19,34 @@ describe("Test flights apis", function() {
                 done();
             });
         });
+
+        it("Test if we get invalid request when we put an empty origin. ", function(done) {
+            var params_test={
+                //"origin": "NYC",
+                "destination": "LGA",
+                "start_date": "2016-03-11",
+                "adult_passengers": 2,
+                "max_stops": 1,
+                "max_price": 1000,
+                "max_price_currency": "USD"
+            };
+            request.post({
+                headers: {'content-type' : 'application/json'},
+                url: base_url+"api/flights/list",
+                body: JSON.stringify(params_test)
+
+            }, function(error, response, body){
+                //expect('object').toBe('object');
+                body=JSON.parse(body)
+                expect(body.message ).toBe("Request is invalid");
+                expect(body.validation[0].property).toBe("instance.origin");
+                expect(body.validation[0].property).toBe("instance.origin");
+                expect(body.validation[0].message).toBe("is required");
+                done();
+            });
+
+
+        }, 10000);
 
     });
 });

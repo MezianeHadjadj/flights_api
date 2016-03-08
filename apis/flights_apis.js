@@ -18,7 +18,7 @@ exports.list =  function (req, res) {
                 }
             ],
             maxPrice: req.body.max_price_currency + req.body.max_price,
-            solutions: 10
+            solutions: 1
         }
     };
 
@@ -30,9 +30,9 @@ exports.list =  function (req, res) {
         body: JSON.stringify(params)
 
     }, function(error, response, body){
-        console.log("error:"+error);
-        console.log("response:"+response);
-        console.log("body:"+body);
+        //console.log("error:"+error);
+        //console.log("response:"+response);
+        //console.log("body:"+body);
         res.json(JSON.parse(body));
     });
 
